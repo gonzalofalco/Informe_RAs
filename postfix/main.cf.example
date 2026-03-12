@@ -1,0 +1,20 @@
+# Basico de identidad local
+myhostname = mail.local
+myorigin = $myhostname
+mydestination = localhost
+
+# Escuchar solo local para no exponer este host como servidor SMTP publico
+inet_interfaces = loopback-only
+
+# Redes confiables locales
+mynetworks = 127.0.0.0/8 [::1]/128
+
+# Relay SMTP interno
+relayhost = [10.190.89.55]:25
+
+# TLS saliente opcional (si el relay lo soporta)
+smtp_tls_security_level = may
+smtp_tls_loglevel = 1
+
+# Evita reenviar correo localmente sin control
+local_recipient_maps =
