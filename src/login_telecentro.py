@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 #!/usr/bin/env python3
 """Automatiza el login en usuarios.telecentro.net.ar usando Playwright.
 
